@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,7 +159,7 @@
     .adv11 {
   background-color: #444;
   width: 130px;
-  height: 880px;
+  height: 760px;
   color: white;
   text-align: center;
   border-radius: 10px;
@@ -169,7 +170,7 @@
 .adv22{
   background-color: #444;
   width: 130px;
-  height: 880px;
+  height: 760px;
   color: white;
   text-align: center;
   border-radius: 10px;
@@ -529,13 +530,52 @@ body.mobile-friendly * {
    .news-section2{
     position: relative;
     left: 684px;
-    top: -550px;
+    top: -440px;
+    height: 442px;
     color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
    }
+   .news-section2::-webkit-scrollbar {
+    width: 10px;
+}
+
+.news-section2::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+.news-section2::-webkit-scrollbar-thumb {
+    background: #a4a2a2; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.news-section2::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.news-section2::-webkit-scrollbar-thumb:active {
+    background: #333; 
+}
+
+.news-section2 {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
    .yolo-tv{
     position: relative;
     left: 360px;
-    top: -1110px;
+    top: -882px;
    }
    .navbar-brand{
     left: -150px;
@@ -575,6 +615,7 @@ body.mobile-friendly * {
             color: #fff;
             top: 180px;
             left: 24px;
+            overflow-y: auto;
         }
         .section {
             margin-bottom: 20px;
@@ -757,7 +798,7 @@ body.mobile-friendly * {
                 <li class="news-box">DWP is providing 10% Living Cost Support</li>
                 <li class="news-box">PM in India Today</li>
                 <li class="news-box">UK-China Trade Deal Approved</li>
-                <li class="news-box">Read More...</li>
+                <li class="news-box"style='position: relative;left:600px;width: 540px;'>Read More...</li>
             </ul>
             <hr>
             <h5 class="section-title">Business</h5>
@@ -766,7 +807,17 @@ body.mobile-friendly * {
               <li class="news-box">DWP is providing 10% Living Cost Support</li>
               <li class="news-box">PM in India Today</li>
               <li class="news-box">UK-China Trade Deal Approved</li>
-              <li class="news-box">Read More...</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box">UK-China Trade Deal Approved</li>
+              <li class="news-box"style='position: relative;left:600px;width: 540px;'>Read More...</li>
           </ul>
         </div>
         <div class="yolo-tv">
@@ -782,7 +833,7 @@ body.mobile-friendly * {
       <p>DWP is providing 10% Living Cost Support</p>
       <p>PM in India Today</p>
       <p>UK-China Trade Deal Approved</p>
-      <a class="read-more" href="#">Read More...</a>
+      <a class="read-more" href="#" style='position: relative;left:600px;width: 540px;'>Read More...</a>
   </div>
   <div class="separator"></div>
   <div class="section">
@@ -791,7 +842,17 @@ body.mobile-friendly * {
       <p>DWP is providing 10% Living Cost Support</p>
       <p>PM in India Today</p>
       <p>UK-China Trade Deal Approved</p>
-      <a class="read-more" href="#">Read More...</a>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <p>UK-China Trade Deal Approved</p>
+      <a class="read-more" href="#"style='position: relative;left:600px;width: 540px;'>Read More...</a>
   </div>
 </div>
   <footer class="footer">
