@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+
+<script  src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+</head>
+<body>
+    <div id="details" class="container mt-5">
+        <!-- Details will be injected here -->
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+
+    <script  src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script>
+        // Initialize Firebase
+        // (Include your Firebase initialization code here)
+        var firebaseConfig = {
+    apiKey: "AIzaSyDhZPE8mascQUpraZYrDWKMYa2a0cp7LFw",
+    authDomain: "yolopanel.firebaseapp.com",
+    databaseURL: "https://yolopanel-default-rtdb.firebaseio.com",
+    projectId: "yolopanel",
+    storageBucket: "yolopanel.appspot.com",
+    messagingSenderId: "647674058442",
+    appId: "1:647674058442:web:ca6822cfcbda29b2aac633"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+        // Get the ID from the URL
+        const path = window.location.pathname.split('/').pop();
+        const id = path;
+
+        // Fetch the data for the given ID
+        firebase.database().ref("places/" + id).once('value').then(function(snapshot) {
+            const data = snapshot.val();
+            const detailsHtml = `
+                <div class='card mb-3'>
+                    <img src=${data.image || ""} class="card-img-top">
+                    <div class='card-body'>
+                        <h5 class='card-title'>${data.name}</h5>
+                        <p class='card-text'>${data.place}</p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('details').innerHTML = detailsHtml;
+        });
+    </script>
+</body>
+</html>
