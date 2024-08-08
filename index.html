@@ -989,7 +989,7 @@ firebase.database().ref("places").on("child_added", function(snapshot) {
     var id = snapshot.key; // Get the unique ID of the card
     var html = `
         <center>
-            <a href="detail/${id}" class="card-link">
+            <a href="detail.html?id=${id}" class="card-link">
                 <div class='card mb-3' id='card'>
                     <img src=${snapshot.val().image || ""} class="card-img-top">
                     <div class='card-body'>
@@ -1003,7 +1003,6 @@ firebase.database().ref("places").on("child_added", function(snapshot) {
     var places = document.getElementById("content");
     places.innerHTML = html + places.innerHTML;
 });
-
   </script>
 </body>
 </html>
