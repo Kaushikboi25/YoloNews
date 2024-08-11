@@ -1003,22 +1003,13 @@ firebase.database().ref("places").on("child_added", function(snapshot) {
     var places = document.getElementById("content");
     places.innerHTML = html + places.innerHTML;
 });
-    const dateObj = new Date();
-const month   = dateObj.getUTCMonth() + 1; // months from 1-12
-const day     = dateObj.getUTCDate();
-const year    = dateObj.getUTCFullYear();
+    let obj = new Date(); 
+let day = obj.getUTCDate(); 
+let month = obj.getUTCMonth() + 1; 
+let year = obj.getUTCFullYear(); 
+console.log(`Day: ${day}, Month: ${month}, Year: ${year}`);
 
-const newDate = year + "/" + month + "/" + day;
-
-// Using template literals:
-const newDate = `${year}/${month}/${day}`;
-
-// Using padded values, so that 2023/1/7 becomes 2023/01/07
-const pMonth        = month.toString().padStart(2,"0");
-const pDay          = day.toString().padStart(2,"0");
-const newPaddedDate = `${year}/${pMonth}/${pDay}`;
-
-    document.getElementById('date').innerHTML=newDate;
+    document.getElementById('date').innerHTML=`Day: ${day}, Month: ${month}, Year: ${year}`
   </script>
 </body>
 </html>
